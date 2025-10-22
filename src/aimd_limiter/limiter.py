@@ -207,7 +207,7 @@ class AIMDAsyncLimiter:
             new_rate = min(self._current_rate + self._additive_increase, self._max_rate)
             self._current_rate = max(new_rate, self._min_rate)
 
-            if (
+            if (  # pragma: no branch
                 self._in_fast_recovery
                 and self._recovery_target is not None
                 and self._current_rate >= self._recovery_target
