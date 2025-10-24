@@ -1,4 +1,4 @@
-mkdocs>=1.6
-mkdocs-material>=9.5
-mkdocs-static-i18n>=1.3
-jieba>=0.42
+mkdocs
+mkdocs-material
+mkdocs-static-i18n
+jieba

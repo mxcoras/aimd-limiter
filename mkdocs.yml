@@ -1,6 +1,6 @@
 site_name: AIMD Limiter
 site_description: Asynchronous AIMD-based rate limiter for Python
-site_url: https://aimd-limiter.readthedocs.io
+site_url: !ENV READTHEDOCS_CANONICAL_URL
 repo_url: https://github.com/mxcoras/aimd-limiter
 repo_name: mxcoras/aimd-limiter
 docs_dir: docs
