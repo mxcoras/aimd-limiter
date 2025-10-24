@@ -1,7 +1,5 @@
 # AIMD Limiter
 
-AIMD Limiter 是一个基于 AIMD（加性增大、乘性减小）控制回路构建的异步 Python 限流器，可在保持高吞吐的同时主动进行拥塞控制。
-
 ```{toctree}
 :caption: 目录
 :hidden:
@@ -11,9 +9,11 @@ api
 thread-safety
 ```
 
+AIMD Limiter 是一个基于 AIMD（加性增大、乘性减小）控制回路构建的异步 Python 限流器，可在保持高吞吐的同时主动进行拥塞控制。
+
 ## 核心特性
 
-- 完整的 `asyncio` 异步 API。
+- 完整的 `asyncio` 异步 API，同时兼容未来的无 GIL 的 CPython（free-threaded）。
 - 可预测的控制流程，覆盖慢启动、拥塞避免与快速恢复。
 - 通过许可（permit）统一流控与反馈，成功与失败都会被自动记录。
 - 公开关键只读属性，便于接入监控与告警系统。
@@ -30,9 +30,9 @@ thread-safety
 
 ## 文档导览
 
-- [使用指南](usage.md)：学习如何在实际项目中集成限流器。
-- [API 参考](api.md)：查看构造参数、方法与关键数据结构。
-- [线程安全性](thread-safety.md)：理解并发模型与部署注意事项。
+- [使用指南](usage)：学习如何在实际项目中集成限流器。
+- [API 参考](api)：查看构造参数、方法与关键数据结构。
+- [线程安全性](thread-safety)：理解并发模型与部署注意事项。
 
 ## 参与贡献与支持
 

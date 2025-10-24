@@ -37,12 +37,16 @@ root_doc = supported_languages[language]
 exclude_patterns: list[str] = ["__pycache__"]
 if language == "en":
     exclude_patterns.append("zh/**")
-else:  # language == "zh"
+else:
     exclude_patterns.append("en/**")
 
 html_theme = "furo"
 html_title = "AIMD Limiter"
 html_static_path: list[str] = []
+templates_path = ["_templates"]
+redirect_target = f"{supported_languages[language]}.html"
+html_additional_pages = {"index": "redirect.html"}
+html_context = {"redirect_target": redirect_target}
 
 myst_enable_extensions = [
     "colon_fence",
