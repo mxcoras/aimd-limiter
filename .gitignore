@@ -32,3 +32,9 @@ env/
 # OS-specific
 .DS_Store
 Thumbs.db
+
+# copilot
+copilot-instructions.md
+
+# mkdocs
+/site/

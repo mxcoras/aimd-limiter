@@ -8,24 +8,35 @@ theme:
   name: material
   language: en
   features:
-    - navigation.instant
     - navigation.sections
     - content.code.copy
 plugins:
-  - search
+  - search:
+      lang:
+        - en
+        - zh
   - i18n:
       default_language: en
       default_translation: en
-      languages:
-        en: English
-        zh: 中文
       docs_structure: suffix
-      nav_translations:
-        zh:
-          Home: 首页
-          Usage: 使用指南
-          API Reference: API 参考
-          Thread Safety: 线程安全
+      fallback_to_default: true
+      languages:
+        - locale: en
+          name: English
+          default: true
+          build: true
+        - locale: zh
+          name: 中文
+          build: true
+          nav_translations:
+            Home: 首页
+            Usage: 使用指南
+            API Reference: API 参考
+            Thread Safety: 线程安全
+          theme:
+            language: zh
+hooks:
+  - docs/hooks.py
 markdown_extensions:
   - admonition
   - attr_list
