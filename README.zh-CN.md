@@ -11,6 +11,12 @@
 - 适用于 asyncio 驱动的服务端或 SDK。
 - 100% 单元测试覆盖率。
 
+## 安装
+
+```bash
+pip install aimd-limiter
+```
+
 ## 使用示例
 
 ```python
@@ -31,7 +37,7 @@ asyncio.run(main())
 
 ## 文档
 
-- [项目文档](https://mxcoras.github.io/aimd-limiter/)
+- [项目文档](https://aimd-limiter-zh.readthedocs.io/latest/zh/index.html)
 
 ## 开发流程
 

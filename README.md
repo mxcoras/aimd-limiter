@@ -13,6 +13,12 @@ Asynchronous Python rate limiter built around the Additive Increase Multiplicati
 - Designed for integration inside asyncio-based services and SDKs.
 - 100% test coverage.
 
+## Installation
+
+```bash
+pip install aimd-limiter
+```
+
 ## Usage Example
 
 ```python
@@ -33,7 +39,7 @@ asyncio.run(main())
 
 ## Documentation
 
-- [Documentation](https://mxcoras.github.io/aimd-limiter/)
+- [Documentation](https://aimd-limiter.readthedocs.io/latest/en/index.html)
 
 ## Development
 
