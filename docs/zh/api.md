@@ -41,12 +41,12 @@ async with permit:
     ...
 ```
 
-`acquire()` 返回的上下文管理器，会跟踪成功或失败。一旦许可被终结，再次调用 `mark_success()` 或 `mark_failure()` 将被忽略。
+`acquire()` 返回的上下文管理器，会跟踪成功或失败。一旦许可被终止，再次调用 `mark_success()` 或 `mark_failure()` 将被忽略。
 
 ### 方法
 
-- `mark_success() -> Awaitable[None]`：在未终结的情况下记录成功。
-- `mark_failure() -> Awaitable[None]`：在未终结的情况下记录失败。
+- `mark_success() -> Awaitable[None]`：在未终止的情况下记录成功。
+- `mark_failure() -> Awaitable[None]`：在未终止的情况下记录失败。
 
 ## `_AcquireHandle`
 
@@ -62,4 +62,4 @@ async with limiter.acquire():
 
 ## 错误处理
 
-构造函数会校验参数范围，若不符合要求则抛出 `ValueError`。限流器不会创建后台任务，协程的取消会自然向上冒泡。
+构造函数会校验参数范围，若不符合要求则抛出 `ValueError`。限流器不会创建后台任务，协程的取消会自然向上传播。

@@ -11,7 +11,7 @@
 ## Cross-Thread Usage
 
 - `asyncio` event loops are not thread-safe by design. Use a separate limiter per thread or use thread-safe queues to marshal work back to the owning loop.
-- When running on CPython 3.13+ with the experimental free-threaded runtime, you must still avoid calling limiter methods from threads that do not own the event loop.
+- When running on CPython 3.14+ with free-threaded runtime, you must still avoid calling limiter methods from threads that do not own the event loop.
 
 ## Multi-Process Setups
 

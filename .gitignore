@@ -38,3 +38,6 @@ copilot-instructions.md
 
 # mkdocs
 /site/
+
+# Sphinx
+docs/_build/

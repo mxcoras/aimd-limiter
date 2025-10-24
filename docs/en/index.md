@@ -2,9 +2,18 @@
 
 AIMD Limiter is an asynchronous Python rate limiter built on the Additive Increase Multiplicative Decrease (AIMD) control loop. It is designed for services and SDKs that need adaptive back-pressure with predictable dynamics.
 
+```{toctree}
+:caption: Contents
+:hidden:
+
+usage
+api
+thread-safety
+```
+
 ## Key Features
 
-- Fully asynchronous API compatible with `asyncio` and upcoming free-threaded CPython builds.
+- Fully asynchronous API compatible with `asyncio`.
 - Deterministic control loop that mirrors TCP slow start, congestion avoidance, and fast recovery.
 - Back-pressure expressed as permits, with automatic success/failure feedback.
 - Observable state via lightweight properties to inform metrics and dashboards.
