@@ -28,9 +28,20 @@ supported_languages = {
     "zh": "zh/index",
 }
 
-language = os.environ.get("READTHEDOCS_LANGUAGE", "en") or "en"
-if language not in supported_languages:
-    language = "en"
+language_aliases = {
+    "en": "en",
+    "en-us": "en",
+    "en_us": "en",
+    "zh": "zh",
+    "zh-cn": "zh",
+    "zh_cn": "zh",
+    "zh-hans": "zh",
+    "zh_hans": "zh",
+}
+
+language_env = (os.environ.get("READTHEDOCS_LANGUAGE") or "en").strip()
+language_key = language_env.replace("_", "-").lower()
+language = language_aliases.get(language_key, "en")
 
 root_doc = supported_languages[language]
 
